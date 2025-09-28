@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alarmas Runners — Prototipo MOBILE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="appbar">
+    <button id="menuBtn" aria-label="Menú">☰</button>
+    <div class="title">Alarmas Runners</div>
+  </header>
+
+  <nav id="drawer" class="drawer">
+    <a href="#" data-screen="home" class="active">Inicio</a>
+    <a href="#" data-screen="alarms">Alarmas</a>
+    <a href="#" data-screen="train">Entrenar</a>
+    <a href="#" data-screen="history">Historial</a>
+    <a href="#" data-screen="plans">Planes</a>
+    <a href="#" data-screen="settings">Ajustes</a>
+  </nav>
+
+  <main id="screen-home" class="screen visible">
+    <section class="card">
+      <h1>Corre mirando el camino, no la pantalla</h1>
+      <p>Alarmas por tiempo, distancia e intervalos con guía por voz y vibración.</p>
+      <object data="../assets/mobile/home-principal.pdf" type="application/pdf" class="pdf-embed" width="100%" height="560">
+      <p>No se pudo incrustar el PDF. <a href="../assets/mobile/home-principal.pdf" target="_blank" rel="noopener">Abrir en nueva pestaña</a></p>
+    </object>
+      <button class="btn primary" data-screen="alarms">Crear primera alarma</button>
+    </section>
+  </main>
+
+  <main id="screen-alarms" class="screen">
+    <section class="card">
+      <h3>Nueva alarma</h3>
+      <label class="row"><span>Tipo</span><select><option>Tiempo</option><option>Distancia</option><option>Intervalos</option></select></label>
+      <label class="row"><span>Objetivo</span><input type="text" placeholder="5 km / 25 min"></label>
+      <label class="row"><span>Señal</span><select><option>Voz</option><option>Vibración</option><option>Voz + vibración</option></select></label>
+      <object data="../assets/mobile/new-alarm.pdf" type="application/pdf" class="pdf-embed" width="100%" height="560">
+      <p>No se pudo incrustar el PDF. <a href="../assets/mobile/new-alarm.pdf" target="_blank" rel="noopener">Abrir en nueva pestaña</a></p>
+    </object>
+      <button class="btn primary" data-screen="train">Guardar e iniciar</button>
+    </section>
+  </main>
+
+  <main id="screen-train" class="screen"><section class="card"><h3>Entrenamiento (vista de referencia)</h3><object data="../assets/mobile/preferences.pdf" type="application/pdf" class="pdf-embed" width="100%" height="560">
+      <p>No se pudo incrustar el PDF. <a href="../assets/mobile/preferences.pdf" target="_blank" rel="noopener">Abrir en nueva pestaña</a></p>
+    </object></section></main>
+  <main id="screen-history" class="screen"><section class="card"><h3>Historial</h3><object data="../assets/mobile/history.pdf" type="application/pdf" class="pdf-embed" width="100%" height="560">
+      <p>No se pudo incrustar el PDF. <a href="../assets/mobile/history.pdf" target="_blank" rel="noopener">Abrir en nueva pestaña</a></p>
+    </object></section></main>
+  <main id="screen-plans" class="screen"><section class="card"><img src="../assets/mockups/plans.svg" alt="Planes" class="mock"></section></main>
+
+  <main id="screen-settings" class="screen"><section class="card"><h3>Ajustes</h3><object data="../assets/mobile/settings.pdf" type="application/pdf" class="pdf-embed" width="100%" height="560">
+      <p>No se pudo incrustar el PDF. <a href="../assets/mobile/settings.pdf" target="_blank" rel="noopener">Abrir en nueva pestaña</a></p>
+    </object></section>
+  </main>
+
+  <button id="fab">+</button>
+  <aside id="commentsPanel" class="panel">
+    <header>
+      <h4>Comentarios</h4>
+      <button id="closePanel" aria-label="Cerrar">×</button>
+    </header>
+    <div class="body">
+      <textarea id="commentText" rows="4" placeholder="Feedback para esta pantalla…"></textarea>
+      <button id="saveComment" class="btn primary">Guardar</button>
+      <ul id="commentsList" class="comments"></ul>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>

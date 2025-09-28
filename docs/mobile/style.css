@@ -1,0 +1,26 @@
+:root{--bg:#0b1220;--panel:#111827;--card:#0f172a;--brand:#22c55e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#e5e7eb;font-family:system-ui,ui-sans-serif}
+.appbar{position:sticky;top:0;display:flex;align-items:center;gap:10px;padding:10px 12px;background:#0b1220d0;border-bottom:1px solid #1f2937;backdrop-filter:saturate(160%) blur(6px);z-index:20}
+#menuBtn{font-size:20px;background:#1f2937;color:#fff;border:1px solid #2b3340;border-radius:10px;padding:6px 10px}
+.title{font-weight:700}
+.drawer{position:fixed;top:56px;left:-240px;bottom:0;width:220px;background:#0f172a;border-right:1px solid #1f2937;display:flex;flex-direction:column;padding:8px;gap:6px;transition:left .25s ease;z-index:18}
+.drawer.open{left:0}
+.drawer a{color:#cbd5e1;text-decoration:none;padding:10px;border-radius:10px}
+.drawer a.active,.drawer a:hover{background:#1f2937;color:#fff}
+.screen{display:none;padding:14px}.screen.visible{display:block}
+.cards{display:grid;grid-template-columns:1fr;gap:12px}
+.card{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:14px}
+.row{display:flex;align-items:center;gap:10px}
+.btn{border:1px solid #334155;background:#111827;color:#fff;border-radius:12px;padding:8px 12px;cursor:pointer}
+.btn.primary{background:var(--brand);border-color:var(--brand)}
+/* Panel comentarios (igual al web) */
+#fab{position:fixed;right:14px;bottom:14px;width:52px;height:52px;border-radius:50%;border:none;background:var(--brand);color:#fff;font-size:28px;cursor:pointer;z-index:40}
+.panel{position:fixed;left:50%;bottom:80px;transform:translateX(-50%);width:92vw;background:var(--panel);border:1px solid #1f2937;border-radius:16px;display:none;z-index:40}
+.panel header{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1px solid #1f2937}
+.panel .body{padding:12px}
+.panel textarea{width:100%;resize:vertical;border-radius:10px;border:1px solid #334155;background:#0b1220;color:#fff;padding:8px}
+.comments{list-style:none;margin:12px 0 0 0;padding:0;display:grid;gap:8px}
+.comments li{background:#0b1220;border:1px solid #243042;border-radius:10px;padding:8px}
+
+.mock{width:100%;height:auto;border-radius:12px;border:1px solid #243042;background:#0b1220}
+.pdf-embed{border:1px solid #243042;border-radius:12px;background:#0b1220}

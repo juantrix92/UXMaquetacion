@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alarmas Runners — Prototipo WEB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="note">WEB • Grid 12 columnas • Caso: Alarmas Runners</aside>
+  <header class="topbar">
+    <div class="brand">Alarmas Runners</div>
+    <nav class="topnav">
+      <a href="#" data-screen="home" class="active">Inicio</a>
+      <a href="#" data-screen="alarms">Alarmas</a>
+      <a href="#" data-screen="train">Entrenar</a>
+      <a href="#" data-screen="history">Historial</a>
+      <a href="#" data-screen="plans">Planes</a>
+      <a href="#" data-screen="settings">Ajustes</a>
+    </nav>
+  </header>
+
+  <main id="screen-home" class="screen visible">
+    <section class="hero-card">
+      <h1>Alarma tu ritmo, no tu mirada 👟</h1>
+      <p>Configura alarmas por <b>tiempo</b>, <b>distancia</b> o <b>intervalos</b> con guía por voz y vibración. Sin mirar la pantalla.</p>
+      <div class="grid12">
+        <div class="card span-8">
+          <object data="../assets/web/home.pdf" type="application/pdf" class="pdf-embed" width="100%" height="640">
+      <p>No se pudo incrustar el PDF. <a href="../assets/web/home.pdf" target="_blank" rel="noopener">Abrir en nueva pestaña</a></p>
+    </object>
+        </div>
+        <div class="card span-4">
+          <h3>Red Route → MVP</h3>
+          <ul class="list">
+            <li>Configurar alarmas</li>
+            <li>Guía por voz/vibración</li>
+            <li>Iniciar/pausar entrenamiento</li>
+            <li>Historial de sesiones</li>
+          </ul>
+          <button class="btn primary" data-screen="alarms">Crear primera alarma</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <main id="screen-alarms" class="screen">
+    <section class="grid12">
+      <div class="card span-5">
+        <h3>Nueva alarma</h3>
+        <label class="row"><span>Tipo</span><select><option>Tiempo</option><option>Distancia</option><option>Intervalos</option></select></label>
+        <label class="row"><span>Objetivo</span><input type="text" placeholder="Ej: 5 km / 25 min"></label>
+        <label class="row"><span>Señal</span><select><option>Voz</option><option>Vibración</option><option>Voz + vibración</option></select></label>
+        <button class="btn primary" data-screen="train">Guardar e iniciar</button>
+      </div>
+      <div class="card span-7">
+        <h3>Previsualización</h3>
+        <object data="../assets/web/new-alarm.pdf" type="application/pdf" class="pdf-embed" width="100%" height="640">
+      <p>No se pudo incrustar el PDF. <a href="../assets/web/new-alarm.pdf" target="_blank" rel="noopener">Abrir en nueva pestaña</a></p>
+    </object>
+      </div>
+    </section>
+  </main>
+
+  <main id="screen-train" class="screen">
+    <section class="grid12">
+      <div class="card span-8"><object data="../assets/web/material-wireframes.pdf" type="application/pdf" class="pdf-embed" width="100%" height="640">
+      <p>No se pudo incrustar el PDF. <a href="../assets/web/material-wireframes.pdf" target="_blank" rel="noopener">Abrir en nueva pestaña</a></p>
+    </object>
+      </div>
+      <div class="card span-4">
+        <h3>Controles</h3>
+        <button class="btn">Pausar</button>
+        <button class="btn">Reanudar</button>
+        <button class="btn">Finalizar</button>
+      </div>
+    </section>
+  </main>
+
+  <main id="screen-history" class="screen">
+    <section class="grid12">
+      <div class="card span-12">
+        <h3>Historial</h3><object data="../assets/web/history.pdf" type="application/pdf" class="pdf-embed" width="100%" height="640">
+      <p>No se pudo incrustar el PDF. <a href="../assets/web/history.pdf" target="_blank" rel="noopener">Abrir en nueva pestaña</a></p>
+    </object></div>
+    </section>
+  </main>
+
+  <main id="screen-plans" class="screen">
+    <section class="grid12">
+      <div class="card span-12">
+        <h3>Planes de entrenamiento</h3>
+        <img src="../assets/mockups/plans.svg" alt="Planes" class="mock">
+      </div>
+    </section>
+  </main>
+
+  <main id="screen-settings" class="screen">
+    <section class="grid12">
+      <div class="card span-12">
+        <h3>Ajustes</h3><object data="../assets/web/settings.pdf" type="application/pdf" class="pdf-embed" width="100%" height="640">
+      <p>No se pudo incrustar el PDF. <a href="../assets/web/settings.pdf" target="_blank" rel="noopener">Abrir en nueva pestaña</a></p>
+    </object></div>
+    </section>
+  </main>
+
+  <button id="fab">+</button>
+  <aside id="commentsPanel" class="panel">
+    <header>
+      <h4>Comentarios</h4>
+      <button id="closePanel" aria-label="Cerrar">×</button>
+    </header>
+    <div class="body">
+      <textarea id="commentText" rows="4" placeholder="Feedback para esta pantalla…"></textarea>
+      <button id="saveComment" class="btn primary">Guardar</button>
+      <ul id="commentsList" class="comments"></ul>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+:root{--bg:#0b1220;--panel:#111827;--card:#0f172a;--muted:#9aa5b1;--brand:#22c55e}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:var(--bg);color:#e5e7eb;font-family:ui-sans-serif,system-ui}
+.note{position:fixed;top:8px;right:8px;background:#111827bd;border:1px solid #1f2937;border-radius:10px;padding:6px 10px;font-size:12px;z-index:30}
+.topbar{position:sticky;top:0;display:flex;gap:20px;align-items:center;padding:12px 16px;background:#0b1220d0;backdrop-filter:saturate(160%) blur(6px);border-bottom:1px solid #1f2937;z-index:20}
+.brand{font-weight:700}
+.topnav a{color:#cbd5e1;text-decoration:none;margin-right:12px;padding:6px 8px;border-radius:10px}
+.topnav a.active,.topnav a:hover{background:#1f2937;color:#fff}
+.grid12{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;padding:16px}
+.card{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:14px}
+.span-12{grid-column:span 12}.span-8{grid-column:span 8}.span-6{grid-column:span 6}.span-4{grid-column:span 4}
+.btn{border:1px solid #334155;background:#111827;color:#fff;border-radius:12px;padding:8px 12px;cursor:pointer}
+.btn.primary{background:var(--brand);border-color:var(--brand)}
+.list{padding-left:18px}
+.screen{display:none}.screen.visible{display:block}
+/* Panel de comentarios */
+#fab{position:fixed;right:18px;bottom:18px;width:52px;height:52px;border-radius:50%;border:none;background:var(--brand);color:#fff;font-size:28px;cursor:pointer;z-index:40}
+.panel{position:fixed;right:12px;bottom:86px;width:340px;max-width:90vw;background:var(--panel);border:1px solid #1f2937;border-radius:16px;display:none;z-index:40}
+.panel header{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1px solid #1f2937}
+.panel .body{padding:12px}
+.panel textarea{width:100%;resize:vertical;border-radius:10px;border:1px solid #334155;background:#0b1220;color:#fff;padding:8px}
+.comments{list-style:none;margin:12px 0 0 0;padding:0;display:grid;gap:8px}
+.comments li{background:#0b1220;border:1px solid #243042;border-radius:10px;padding:8px}
+@media (max-width:900px){.span-8{grid-column:span 12}.span-6{grid-column:span 12}.span-4{grid-column:span 12}}
+
+.mock{width:100%;height:auto;border-radius:12px;border:1px solid #243042;background:#0b1220}
+.pdf-embed{border:1px solid #243042;border-radius:12px;background:#0b1220}
